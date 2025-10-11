@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ Smooth scrolling for all links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ✅ Global styles */
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: #0f172a; /* dark navy background */
+  color: #e2e8f0;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* ✅ Gradient text for headings */
+.gradient-text {
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ✅ Add custom button styles */
+.btn-primary {
+  @apply px-6 py-2 bg-blue-600 text-white font-medium rounded-full shadow-md hover:bg-blue-700 transition duration-300;
+}
+
+.btn-outline {
+  @apply px-6 py-2 border border-blue-500 text-blue-400 font-medium rounded-full hover:bg-blue-600 hover:text-white transition duration-300;
+}
+
+/* ✅ Section spacing and headings */
+section {
+  scroll-margin-top: 80px;
+}
+
+section h2 {
+  @apply text-4xl font-extrabold mb-6 tracking-wide;
+}
+
+/* ✅ Cards for projects and skills */
+.card {
+  @apply bg-gray-800 rounded-xl shadow-lg hover:shadow-blue-500/10 p-6 transition-transform duration-300 hover:-translate-y-2;
+}
+
+/* ✅ Navbar blur + backdrop effect */
+nav {
+  @apply bg-opacity-60 backdrop-blur-md;
+}
+
+/* ✅ Animate fade-in for sections */
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ Responsive typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* ✅ Nice hover for links */
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #3b82f6;
+}
+
+/* ✅ Scrollbar styling for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2563eb, #06b6d4);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
