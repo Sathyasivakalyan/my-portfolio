@@ -2160,6 +2160,135 @@ export default function App() {
     font-size: 24px;
   }
 }
+
+/* Tablets and smaller laptops (≤ 1024px) */
+@media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-subtitle {
+    font-size: 22px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 42px;
+  }
+}
+
+/* Large mobile screens (≤ 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .nav-links {
+    display: none; /* hide default nav on mobile */
+  }
+
+  /* Add a mobile menu toggle */
+  .navbar {
+    padding: 16px 0;
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .about-greeting {
+    font-size: 26px;
+  }
+
+  .quick-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    height: 220px;
+  }
+}
+
+/* Small mobile screens (≤ 480px) */
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 24px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .section-description {
+    font-size: 15px;
+  }
+
+  .project-title {
+    font-size: 20px;
+  }
+
+  .about-description {
+    font-size: 15px;
+  }
+
+  .highlight-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .highlight-icon {
+    font-size: 28px;
+  }
+}
+
       `}</style>
     </div>
   );
