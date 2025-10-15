@@ -2288,7 +2288,47 @@ export default function App() {
     font-size: 28px;
   }
 }
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 30px;
+  }
+  .contact-grid {
+    gap: 30px;
+  }
+}
 
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-form .form-row {
+    flex-direction: column;
+  }
+  .section-title {
+    font-size: 26px;
+  }
+  .contact-section {
+    padding: 60px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 50px 10px;
+  }
+  .section-title {
+    font-size: 22px;
+  }
+  .contact-method {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .btn-submit {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
       `}</style>
     </div>
   );
